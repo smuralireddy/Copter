@@ -1,4 +1,3 @@
-
 package game;
 
 import javax.microedition.midlet.*;
@@ -7,9 +6,6 @@ import javax.microedition.lcdui.game.*;
 import java.io.IOException;
 import java.util.*;
 
-/**
- * @author mahi
- */
 public class GameDesign extends GameCanvas implements Runnable,CommandListener{
     Image helimg,blockimg;
     boolean paused=false;
@@ -26,16 +22,14 @@ public class GameDesign extends GameCanvas implements Runnable,CommandListener{
         exit=new Command("exit",Command.EXIT,0);
         pause=new Command("pause",Command.SCREEN,1);
         resume=new Command("resume",Command.SCREEN,1);
-        //this.addCommand(resume);
+        
         this.addCommand(exit);
         this.addCommand(pause);
         this.setCommandListener(this);
     }
    public void commandAction(Command c,Displayable s){
     if(c==exit){
-        ex=true;
-        
-               
+        ex=true;               
     }
     else if(c==pause){
         pause();
@@ -219,8 +213,6 @@ public class GameDesign extends GameCanvas implements Runnable,CommandListener{
         return t.isAlive();
     }
     
-//GEN-LINE:|fields|0|
-    
-//GEN-LINE:|methods|0|
+
     
 }
